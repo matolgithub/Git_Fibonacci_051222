@@ -23,11 +23,13 @@ def fibonacci_2(n: int) -> str:
     return fib_string
 
 
-def fibonacci_recurs(n: int) -> list:
-    pass
+def fibonacci_recurs(n):
+    if n in (1, 2):
+        return 1
+    return fibonacci_recurs(n - 1) + fibonacci_recurs(n - 2)
 
 
 if __name__ == "__main__":
     # fibonacci_1()
     # fibonacci_2(20)
-    fibonacci_recurs(20)
+    print(fibonacci_recurs(10))     # 55
